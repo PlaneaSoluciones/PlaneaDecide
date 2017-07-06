@@ -2,8 +2,8 @@
 # frozen_string_literal: true
 
 Decidim.configure do |config|
-  config.application_name = "My Application Name"
-  config.mailer_sender    = "change-me@domain.org"
+  config.application_name = "PlaneaDecide"
+  config.mailer_sender    = "consul.des@planeasoluciones.com"
   config.authorization_handlers = [ExampleAuthorizationHandler]
 
   # Uncomment this lines to set your preferred locales
