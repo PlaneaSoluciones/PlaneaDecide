@@ -37,7 +37,7 @@ Rails.application.configure do
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
-  # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
+  config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
@@ -45,7 +45,7 @@ Rails.application.configure do
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  # config.force_ssl = true
+  config.force_ssl = true
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
@@ -74,6 +74,7 @@ Rails.application.configure do
   config.active_support.deprecation = :notify
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
+  config.action_mailer.delivery_method = :sendmail
   config.log_formatter = ::Logger::Formatter.new
 
   config.action_mailer.smtp_settings = {
@@ -82,7 +83,7 @@ Rails.application.configure do
     :authentication => Rails.application.secrets.smtp_authentication,
     :user_name      => Rails.application.secrets.smtp_username,
     :password       => Rails.application.secrets.smtp_password,
-    :domain         => Rails.application.secrets.smtp_domain,
+    #:domain         => Rails.application.secrets.smtp_domain,
     :enable_starttls_auto => Rails.application.secrets.smtp_starttls_auto,
     :openssl_verify_mode => 'none'
   }
@@ -97,7 +98,7 @@ Rails.application.configure do
       }.to_json
     }
   end
-          
+
 
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
