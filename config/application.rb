@@ -8,7 +8,7 @@ Bundler.require(*Rails.groups)
 
 module PlaneaDecide
   class Application < Rails::Application
-    config.i18n.available_locales = %w(en ca es)
+    config.i18n.available_locales = %w(en ca es eu it fi fr nl)
     config.i18n.default_locale = :en
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1

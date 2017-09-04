@@ -2,24 +2,27 @@ source "https://rubygems.org"
 
 ruby '2.4.1'
 
-gem "decidim", "0.4.0"
+gem "decidim", "0.5.1"
+gem "decidim-accountability", git: "https://github.com/decidim/decidim-accountability.git"
 
-gem 'puma', '~> 3.9.1'
-gem 'uglifier', '>= 1.3.0'
-gem 'faker', '~> 1.7.3'
+gem 'puma'
+gem 'uglifier'
+gem 'faker', "1.8.4"
 
 group :development, :test do
   gem 'byebug', platform: :mri
   
-  gem "decidim-dev", "0.4.0"
+  gem "decidim-dev", "0.5.1"
   
 end
 
 group :development do
+  gem 'letter_opener'
+  gem 'letter_opener_web'
   gem 'web-console'
-  gem 'listen', '~> 3.1.0'
+  gem 'listen'
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-watcher-listen'
   gem 'capistrano',         require: false
   gem 'capistrano-rvm',     require: false
   gem 'capistrano-rails',   require: false
