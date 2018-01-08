@@ -2,9 +2,7 @@ source "https://rubygems.org"
 
 ruby '2.4.1'
 
-gem "decidim", "0.6.0"
-gem "decidim-accountability", git: "https://github.com/decidim/decidim-accountability.git"
-gem "decidim-participatory_processes", "0.6.0"
+gem "decidim", "0.8.3"
 gem 'puma'
 gem 'uglifier'
 gem 'faker', "1.8.4"
@@ -12,7 +10,7 @@ gem 'faker', "1.8.4"
 group :development, :test do
   gem 'byebug', platform: :mri
   
-  gem "decidim-dev", "0.6.0"
+  gem "decidim-dev", "0.8.3"
   
 end
 
