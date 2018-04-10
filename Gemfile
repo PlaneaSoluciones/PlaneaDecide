@@ -1,18 +1,17 @@
 source "https://rubygems.org"
 
-ruby '2.4.1'
+ruby '2.5.0'
 
-gem "decidim", git:"https://github.com/decidim/decidim"
-gem "decidim-module-blogs", git:"https://github.com/decidim/decidim-module-blogs"
+gem "decidim", "~> 0.10.0"
+
 gem 'puma'
 gem 'uglifier'
-gem 'faker', "1.8.4"
+gem 'faker'
 
 group :development, :test do
   gem 'byebug', platform: :mri
-  
-  gem "decidim-dev", git:"https://github.com/decidim/decidim"
-  
+  gem "decidim-dev", "~> 0.10.0"
+  gem "rspec-rails"
 end
 
 group :development do
